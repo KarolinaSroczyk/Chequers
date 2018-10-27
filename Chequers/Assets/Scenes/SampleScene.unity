@@ -1848,6 +1848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 950828285}
+  - component: {fileID: 950828286}
   m_Layer: 0
   m_Name: Gracz2
   m_TagString: Untagged
@@ -1878,6 +1879,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &950828286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950828284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc7261caa4338c48b798f30d239db37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pawns:
+  - {fileID: 863477120}
+  - {fileID: 294863194}
+  - {fileID: 1462418606}
+  - {fileID: 1543512730}
+  - {fileID: 176494704}
+  - {fileID: 419156105}
+  - {fileID: 33629200}
+  - {fileID: 1502734402}
+  - {fileID: 59912129}
+  - {fileID: 688291021}
 --- !u!1 &1140123114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,6 +2134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1300930223}
+  - component: {fileID: 1300930224}
   m_Layer: 0
   m_Name: Gracz1
   m_TagString: Untagged
@@ -2141,6 +2165,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1300930224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1300930222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc7261caa4338c48b798f30d239db37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pawns:
+  - {fileID: 1708201885}
+  - {fileID: 792908597}
+  - {fileID: 1525257352}
+  - {fileID: 321145422}
+  - {fileID: 2006661858}
+  - {fileID: 424514146}
+  - {fileID: 1363351786}
+  - {fileID: 1140123114}
+  - {fileID: 1679901498}
+  - {fileID: 1744172646}
 --- !u!1 &1330724948
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,6 +3245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1857973639}
+  - component: {fileID: 1857973640}
   m_Layer: 0
   m_Name: Gracz3
   m_TagString: Untagged
@@ -3229,6 +3276,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &1857973640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1857973638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc7261caa4338c48b798f30d239db37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pawns:
+  - {fileID: 329265342}
+  - {fileID: 850569244}
+  - {fileID: 253861596}
+  - {fileID: 768294233}
+  - {fileID: 1855583561}
+  - {fileID: 44560701}
+  - {fileID: 1966800466}
+  - {fileID: 1752530055}
+  - {fileID: 1742829158}
+  - {fileID: 1827889971}
 --- !u!1 &1966800466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,6 +3456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2092390181}
+  - component: {fileID: 2092390182}
   m_Layer: 0
   m_Name: Gracz4
   m_TagString: Untagged
@@ -3417,3 +3487,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!114 &2092390182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2092390180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc7261caa4338c48b798f30d239db37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pawns:
+  - {fileID: 703489775}
+  - {fileID: 1828243652}
+  - {fileID: 1247505416}
+  - {fileID: 389074034}
+  - {fileID: 1330724948}
+  - {fileID: 8704047}
+  - {fileID: 1267909784}
+  - {fileID: 224046176}
+  - {fileID: 50958961}
+  - {fileID: 614328325}

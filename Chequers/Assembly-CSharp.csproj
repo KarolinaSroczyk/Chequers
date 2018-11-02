@@ -61,8 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ExitOnClick.cs" />
     <Compile Include="Assets\Scripts\Kierunek.cs" />
+    <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\SelectOnInput.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Miku/Desktop/Chequers/Chequers/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

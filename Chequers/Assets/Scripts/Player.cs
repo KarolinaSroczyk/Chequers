@@ -6,6 +6,8 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     public Kierunek kierunek;
     public List<GameObject> pawns;
+    private bool isActive;
+
 	void Start () {
 		
 	}
@@ -14,4 +16,14 @@ public class Player : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void ActivatePlayer()
+    {
+        isActive = false;
+    }
+
+    public void DeactivatePlayer()
+    {
+        isActive = true;
+    }
 }

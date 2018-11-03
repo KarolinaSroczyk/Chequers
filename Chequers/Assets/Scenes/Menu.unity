@@ -960,8 +960,9 @@ RectTransform:
   - {fileID: 513326660}
   - {fileID: 2091222143}
   - {fileID: 302208890}
+  - {fileID: 1338186009}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1053,6 +1054,7 @@ GameObject:
   - component: {fileID: 513326660}
   - component: {fileID: 513326662}
   - component: {fileID: 513326661}
+  - component: {fileID: 513326663}
   m_Layer: 5
   m_Name: MenuPanel
   m_TagString: Untagged
@@ -1116,6 +1118,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 513326659}
   m_CullTransparentMesh: 0
+--- !u!114 &513326663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 513326659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee8e1602b780c0478b5e53dc779105f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 1338186008}
+  selectedObject: {fileID: 479255453}
 --- !u!1 &640771645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,11 +1824,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1338186006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -396, y: -204.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 491265000}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377853780

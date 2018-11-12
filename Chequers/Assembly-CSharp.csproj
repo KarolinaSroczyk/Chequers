@@ -63,8 +63,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ExitOnClick.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Globals.cs" />
     <Compile Include="Assets\Scripts\Kierunek.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Scripts\NameSetter.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\SelectOnInput.cs" />
     <Reference Include="UnityEditor.StandardEvents">

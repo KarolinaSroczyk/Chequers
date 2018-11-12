@@ -9,14 +9,15 @@ public class GameManager : MonoBehaviour {
     private int activeIndex;
     public Player[] Players;
     private Player activePlayer;
-	// Use this for initialization
+    private Vector3 nextAiPosition;
+
 	void Start ()
     {
+        nextAiPosition = Vector3.zero;
         activeIndex = 0;
         for(int i = 0;i<=3;i++)
         {
-            Players[i].name = Globals.PlayerNames[i];
-            Debug.Log(Players[i].name);
+            Players[i].SetName(Globals.PlayerNames[i]);
         }
         AssignAi(Globals.PlayersCount);
 	    if(Players.Length > 0)
@@ -47,16 +48,22 @@ public class GameManager : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
-		if(Input.GetMouseButtonDown(0))
+        if(activePlayer.AiControlled)
         {
-            if (moveEnabled)
+            AiMove();
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                Move();
+                if (moveEnabled)
+                {
+                    Move();
+                }
+                SetPawn();
             }
-            SetPawn();
         }
 	}
 
@@ -128,7 +135,7 @@ public class GameManager : MonoBehaviour {
     {
         lastGameObject.transform.position = position;
         if(!CheckForNextJump(position))
-        {//mozna skoczyc
+        {
             activePlayer.DeactivatePlayer();
             do
             {
@@ -161,5 +168,70 @@ public class GameManager : MonoBehaviour {
             }
         }
         return false;
+    }
+
+    private void AiMove()
+    {
+        GameObject[] pawns = activePlayer.pawns.ToArray();
+
+        int random = 0;
+        bool moveImpossible = true;
+        do
+        {
+            random = Random.Range(0, activePlayer.pawnsCount-1);
+            GameObject randomPawn = pawns[random];
+           moveImpossible = !CheckMovePossibility(randomPawn, activePlayer.playerDirection.ToString());
+
+        } while(moveImpossible);
+
+        activePlayer.DeactivatePlayer();
+        do
+        {
+            activeIndex = (activeIndex + 1) % 4;
+        } while (Players[activeIndex].IsDefeated);
+        activePlayer.ActivatePlayer(Players[activeIndex]);
+        activePlayer = activePlayer.GetActivePlayer();
+    }
+
+    private bool CheckMovePossibility(GameObject pawn, string dir)
+    {
+        Vector3 p1 = Vector3.zero;
+        Vector3 p2 = Vector3.zero;
+        switch (dir)
+        {
+            case "North":
+                 p1 = pawn.transform.position + new Vector3(0.75f,0.75f,0f);
+                 p2 = pawn.transform.position + new Vector3(-0.75f, 0.75f, 0f);
+                break;
+            case "South":
+                p1 = pawn.transform.position + new Vector3(0.75f, -0.75f, 0f);
+                p2 = pawn.transform.position + new Vector3(-0.75f, -0.75f, 0f);
+                break;
+            case "East":
+                p1 = pawn.transform.position + new Vector3(-0.75f, 0.75f, 0f);
+                p2 = pawn.transform.position + new Vector3(-0.75f, -0.75f, 0f);
+                break;
+            case "West":
+                p1 = pawn.transform.position + new Vector3(0.75f, 0.75f, 0f);
+                p2 = pawn.transform.position + new Vector3(0.75f, -0.75f, 0f);
+                break;
+        }
+        RaycastHit2D hit1 = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(p1), Vector2.zero);
+        RaycastHit2D hit2 = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(p2), Vector2.zero);
+
+        if(hit1.collider != null && hit1.collider.transform.parent.name.Equals("Fields"))
+        {
+            pawn.transform.position = p1;
+            return true;
+        }
+        else if(hit2.collider != null && hit2.collider.transform.parent.name.Equals("Fields"))
+        {
+            pawn.transform.position = p2;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

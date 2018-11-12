@@ -1,15 +1,20 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public Kierunek kierunek;
     public List<GameObject> pawns;
+    public GameObject PlayerText;
     public bool IsDefeated;
-    private bool AiControlled;
+    public bool AiControlled;
+    public string Name;
     private bool isActive;
     private Player activePlayer;
-    private int pawnsCount;
+    public int pawnsCount;
+    public Direction playerDirection;
+
+    public enum Direction {North, East, South, West};
 
 	void Start ()
     {
@@ -46,5 +51,10 @@ public class Player : MonoBehaviour
     public void SetAi()
     {
         AiControlled = true;
+    }
+
+    public void SetName(string name)
+    {
+        PlayerText.GetComponent<Text>().text = Name = name;
     }
 }

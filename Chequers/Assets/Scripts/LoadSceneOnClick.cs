@@ -10,6 +10,6 @@ public class LoadSceneOnClick : MonoBehaviour {
 
     public void LoadPlayers(int count)
     {
-        Globals.PlayersCount = count;
+        Globals.SetPlayers(count);
     }
 }
